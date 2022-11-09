@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sample Testing Information</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="static/form.css" >
+
+    </head>
+    <body >
+        <div class="container">
+            <div class="form-container">
+                <h1>
+                    Sample Testing Information
+                </h1>
+                <div id="success_message" >
+                    <label for="result" style="color:red;font-size:30px;align:center">{{xx}}</label>
+                </div>
+                <form action="/confirm" method="post" id="reused_form" >
+                    <label for="name">Patient Name:</label>
+                    <input id="name" type="text" name="Name" required maxlength="50">
+                    <label for="age">Patient Age:</label>
+                    <input id="age" type="number" name="age" required maxlength="50">
+                    <label for="Gender">Patient Gender:</label>
+                    <select name="gender" id="gender">
+                        <option value="1">Male</option>
+                        <option value="0">Female</option>
+                    </select>
+                    <label for="test_name">Test Name:</label>
+                    <select name="test_name" id="test_name">
+                        <option value="0">Acute kidney profile</option>
+                        <option value="1">CBC</option>
+                        <option value="2">Complete Urinalysis</option>
+                        <option value="3">Fasting blood sugar</option>
+                        <option value="4">H1N1</option>
+                        <option value="5">HbA1c</option>
+                        <option value="6">Lipid Profile</option>
+                        <option value="7">RTPCR</option>
+                        <option value="8">TSH</option>
+                        <option value="9">Vitamin D-25Hydroxy</option>
+                    </select>
+                    <label for="sample">Sample:</label>
+                    <select name="sample" id="sample">
+                        <option value="0">Blood</option>
+                        <option value="1">Swab</option>
+                        <option value="2">Urine</option>
+                    </select>
+                    <label for="storage">Sample Storage:</label>
+                    <select name="storage" id="storage">
+                        <option value="0">Advanced</option>
+                        <option value="1">Normal</option>
+                    </select>
+                    <label for="booking_date">Test Booking Date:</label>
+                    <input id="booking_date" type="date" name="booking_date">
+                    <label for="test_booking_time">Test Booking Time (HH.MM):</label>
+                    <input id="test_booking_time" type="number" name="test_booking_time" required maxlength="50" step="0.01">
+                    <label for="Sample_collection_date">Sample Collection Date:</label>
+                    <input id="Sample_collection_date" type="date" name="Sample_collection_date">
+                    <label for="collection_time">Sample Collection Time (HH.MM):</label>
+                    <input id="collection_time" type="number" name="collection_time" required maxlength="50" step="0.01">
+                    <label for="cutoff_schedule">Cutoff Schedule:</label>
+                    <select name="cutoff_schedule" id="cutoff_schedule">
+                        <option value="0">Sample by 5PM</option>
+                        <option value="1">Daily</option>
+                    </select>
+                    <label for="cutoff_time">Cutoff Time (HH.MM):</label>
+                    <input id="cutoff_time" type="number" name="cutoff_time" required maxlength="50" step="0.01">
+                    <label for="agent_id">Agent ID:</label>
+                    <input id="agent_id" type="number" name="agent_id" required maxlength="50">
+                    <label for="Traffic">Traffic Condition:</label>
+                    <select name="Traffic" id="Traffic">
+                        <option value="0">Low Traffic</option>
+                        <option value="1">Medium Traffic</option>
+                        <option value="2">High Traffic</option>
+                    </select>
+                    <label for="Agent_Location_KM">Agent Location (KM):</label>
+                    <input id="Agent_Location_KM" type="number" name="Agent_Location_KM" required maxlength="50">
+                    <label for="Time_Taken_To_Reach_Patient_MM">Time Taken To Reach Patient (MM):</label>
+                    <input id="Time_Taken_To_Reach_Patient_MM" type="number" name="Time_Taken_To_Reach_Patient_MM" required maxlength="50">
+                    <label for="Time_For_Sample_Collection_MM">Time For Sample Collection (MM):</label>
+                    <input id="Time_For_Sample_Collection_MM" type="number" name="Time_For_Sample_Collection_MM" required maxlength="50">
+                    <label for="Lab_Location_KM">Lab Location (KM):</label>
+                    <input id="Lab_Location_KM" type="number" name="Lab_Location_KM" required maxlength="50">
+                    <label for="Time_Taken_To_Reach_Lab_MM">Time Taken To Reach Lab (MM):</label>
+                    <input id="Time_Taken_To_Reach_Lab_MM" type="number" name="Time_Taken_To_Reach_Lab_MM" required maxlength="50">
+                    <label for="Mode_Of_Transport">Mode of Transport:</label>
+                    <select name="Mode_Of_Transport" id="Mode_Of_Transport">
+                        <option value="0">Bike</option>
+                        <option value="1">Car</option>
+                    </select>
+                    <button class="button-primary" type="submit">Submit</button>
+                </form>
+
+        </div>
+    </body>
+</html>
